@@ -1,1 +1,1 @@
-<?php header('Location: Controllers/welcome.php'); ?>
+<?php header('Location: Controllers/welcome_C.php'); ?>
