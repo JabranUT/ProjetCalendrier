@@ -2,7 +2,7 @@
   <div class="row">
       <header id="header" class="col-lg-12 offset-3">
         
-      <h1>Site de gestion des soins infirmiers</h1>
+      <h1>Site de gestion des rendez-vous</h1>
 
     </header> 
   </div>

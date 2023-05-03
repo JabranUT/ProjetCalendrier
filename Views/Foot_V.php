@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<center><footer class="col-lg-12">
-				Fait par Jabran 
+				Fait par Jabran et Fréde 
 				<a href="#haut" >haut de page</a>
 			</footer></center>
 		</div>

@@ -1,11 +1,12 @@
 <?php 
-	$Montitle= 'prise de rendez-vous';
+	$Montitle= 'prendre un rendez-vous';
 
 	require '../Views/Header_V.php' ;
 
-	require '../Models/connexion_M.php' ;
 
-	require '../Views/Appointment_V.php' ;
+	require '../Views/FormAppointement_V.php' ;
+
+	require '../Views/javascript/fichier.js' ;
 
 
 	require '../Views/Foot_V.php' ;

@@ -4,7 +4,7 @@
 try
 {
   // On se connecte à MySQL
-  $maConnection = new PDO('mysql:host=127.0.0.1; dbname=test; charset=utf8', 'root', '');
+  $maConnection = new PDO('mysql:host=127.0.0.1; dbname=projet_calendrier; charset=utf8', 'root', '');
 }
 catch(Exception $e)
 {
@@ -12,7 +12,7 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-	$maRequete = 'SELECT * FROM evenements';
-$requeteTest= $maConnection->prepare($maRequete);
-$requeteTest->execute();
+	$maRequete = 'SELECT * FROM appointement';
+$requeteLireAppointement= $maConnection->prepare($maRequete);
+$requeteLireAppointement->execute();
 ?>
