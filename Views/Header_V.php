@@ -13,8 +13,11 @@
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Gestion des rendez-vous :</a>
         <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link " href="..\Controllers/welcome_C.php">Home</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\Appointment_C.php">prendre un rendez-vous</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\Calendar_C.php">gestion des rendez-vous</a></li>
+
+          
         </ul>
       </nav>
     </div>
