@@ -48,8 +48,14 @@
 </div>
 <br>
 <div>
-    <label for="heure">Sélectionnez une heure:</label>
-    <input type="time" id="hour" name="hour">
+
+    <label for="heure">Sélectionnez une plage horaire:</label>
+<select id="hour" name="hour">
+  <option value="09:00-10:00">09:00 - 10:00</option>
+  <option value="10:00-11:00">10:00 - 11:00</option>
+  <option value="14:00-15:00">14:00 - 15:00</option>
+  <option value="15:00-16:00">15:00 - 16:00</option>
+</select>
 </div>
 <br>
 <div class="form-group">

@@ -52,8 +52,13 @@ echo '<div class="container-sm">
 </div>
 <br>
 <div>
-    <label for="heure">Sélectionnez une heure:</label>
-    <input type="time" class="form-control" id="" aria-describedby="emailHelp" placeholder="Modifier heure" name="hour" value='.$appointment['hour'].'>
+
+<select id="hour" name="hour" value='.$appointment['hour'].'>
+  <option value="09:00">09:00 - 10:00</option>
+  <option value="10:00">10:00 - 11:00</option>
+  <option value="14:00">14:00 - 15:00</option>
+  <option value="15:00">15:00 - 16:00</option>
+</select>
 </div>
 
 

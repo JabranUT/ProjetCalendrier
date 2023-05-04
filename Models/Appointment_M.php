@@ -12,7 +12,7 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-$maRequete = 'SELECT * FROM appointments';
+$maRequete = 'SELECT * FROM appointments ORDER BY date ASC, hour ASC';
 $requeteLireAppointments= $maConnection->prepare($maRequete);
 $requeteLireAppointments->execute();
 
