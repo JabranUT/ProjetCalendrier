@@ -36,8 +36,8 @@ while ($ppointements = $requeteLireAppointement->fetch(PDO::FETCH_ASSOC)) {
         <td>$appointements[hour]</td>
 
         <td>
-        <a class='btn btn-primary btn-sm' href='../Controleur/modifier_patient.php?id=$appointements[id]'>modif</a>
-        <a class='btn btn-primary btn-sm' href='../Modele/supprimer_patient.php?id=$appointements[id]'>delete</a>
+        <a class='btn btn-primary btn-sm' href='../Controllers/modifyAppointment.php?id=$appointements[id_appointment]'>modif</a>
+        <a class='btn btn-primary btn-sm' href='../Modele/DeleteAppointment.php?id=$appointements[id_appointment]'>delete</a>
         </td>
         </tr>";
       }

@@ -38,7 +38,7 @@ $password = $_POST['password'];
 $address = $_POST['address'];
 $phone = (int) $_POST['phone'];
 $date = date('Y-m-d', strtotime($_POST['date'])); // format de date MySQL (YYYY-MM-DD)
-$hour = date('H:i:s', strtotime($_POST['hour'])); // format de temps MySQL (HH:MM:SS)
+$hour = date('H:i', strtotime($_POST['hour'])); // format de temps MySQL (HH:MM:SS)
 
 
 var_dump($last_name);
