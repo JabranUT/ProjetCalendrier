@@ -3,7 +3,7 @@
 
 
  <div class="container-sm">
-<form action="../Models/Appointment_M.php" method="post" accept-charset="utf-8">
+<form action="../Controllers/AddAppointment_C.php" method="post" accept-charset="utf-8">
 
 
 <div class="form-group">

@@ -1,8 +1,9 @@
 <?php
 
+var_dump($appointment['id_appointment']);
 
 echo '<div class="container-sm">
-<form action="../Models/ModifyAppointment_M.php" method="post" accept-charset="utf-8">
+<form action="../Controllers/ModifyAppointment_C.php" method="post" accept-charset="utf-8">
 
 <div class="form-group">
     <label for="">ID</label>

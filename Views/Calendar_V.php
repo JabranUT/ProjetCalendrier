@@ -20,7 +20,6 @@
           </tr>
           </thead>
             <tbody>
-
 <?php
 
 while ($appointments = $requeteLireAppointments->fetch(PDO::FETCH_ASSOC)) {
@@ -37,7 +36,7 @@ while ($appointments = $requeteLireAppointments->fetch(PDO::FETCH_ASSOC)) {
 
         <td>
         <a class='btn btn-primary btn-sm' href='../Controllers/ModifyAppointment_C.php?id=$appointments[id_appointment]'>modif</a>
-        <a class='btn btn-primary btn-sm' href='../Models/DeleteAppointment_M.php?id=$appointments[id_appointment]'>delete</a>
+        <a class='btn btn-primary btn-sm' href='../Controllers/DeleteAppointment_C.php?id=$appointments[id_appointment]'>delete</a>
         </td>
         </tr>";
       }
@@ -46,5 +45,3 @@ while ($appointments = $requeteLireAppointments->fetch(PDO::FETCH_ASSOC)) {
         </tbody>
       </table>
       </div>
-
-
