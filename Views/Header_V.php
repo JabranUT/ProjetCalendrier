@@ -13,9 +13,13 @@
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Gestion des rendez-vous :</a>
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link " href="..\Controllers/welcome_C.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link " href="..\Controllers\Appointment_C.php">prendre un rendez-vous</a></li>
-          <li class="nav-item"><a class="nav-link " href="..\Controllers\Calendar_C.php">gestion des rendez-vous</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers/welcome_C.php">(Home)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers\FormAppointment_C.php">(prendre un rendez-vous)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers\ListAppointments_C.php">(gestion des rendez-vous)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers\CalendarFred_C.php">(Calendrier)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers\FormUser_C.php">(ajouter utilisateur)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers\ListUsers_C.php">(gestion des utilisateurs)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Controllers\CalendarFred_C.php">(login)</a></li>
 
           
         </ul>

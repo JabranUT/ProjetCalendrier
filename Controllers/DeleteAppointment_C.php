@@ -13,7 +13,7 @@
 	$OBJConnectionToDB->connection();
 	$id_appointment = (int) $_GET['id'];
 	$requeteLireAppointments = $OBJConnectionToDB->delete($id_appointment);
-	header("location: ../Controllers/Calendar_C.php");
+	header("location: ../Controllers/ListAppointments_C.php");
 
 
 ?>

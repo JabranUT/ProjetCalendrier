@@ -31,7 +31,7 @@ $hour = date('H:i', strtotime($_POST['hour'])); // format de temps MySQL (HH:MM:
 
 	$requeteModifyAppointment = $OBJConnectionToDB->update($id_appointment, $last_name, $first_name, $email, $password, $address, $phone, $date, $hour);
 	//var_dump($requeteModifyAppointment);
-	header("location: ../Controllers/Calendar_C.php");
+	header("location: ../Controllers/ListAppointments_C.php");
 }
 
 	require '../Views/ModifyAppointment_V.php' ;

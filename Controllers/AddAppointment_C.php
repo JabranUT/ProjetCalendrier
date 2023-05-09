@@ -31,5 +31,5 @@ var_dump($first_name);
 
 }
 
-header("location: ../Controllers/Calendar_C.php");
+header("location: ../Controllers/ListAppointments_C.php");
 ?>
