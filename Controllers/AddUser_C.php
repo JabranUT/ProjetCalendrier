@@ -1,4 +1,6 @@
 <?php 
+session_start();
+if(isset($_SESSION['email'])){
 
 	$Montitle= 'prendre un rendez-vous';
 
@@ -30,4 +32,8 @@ var_dump($first_name);
 }
 
 header("location: ../Controllers/ListUsers_C.php");
+}
+if(!isset($_SESSION['email'])){
+header("location: ../Controllers/NOTLogedWelcome_C.php");
+}
 ?>

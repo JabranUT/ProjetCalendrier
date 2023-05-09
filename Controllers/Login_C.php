@@ -2,45 +2,53 @@
 
 session_start();
 
-	require '../Views/Header_V.php' ;
+	require '../Views/NOTLogedHeader_V.php' ;
+
+if(!isset($_POST['email']) && !isset($_POST['password'])){	
+?>	
+	<form action="login_C.php" method="POST">
+		<label>Entrer votre email:</label>
+		<input type="email" name="email">
+		<label>Entrer votre mot de passe:</label>
+		<input type="password" name="password">
+		<input type="submit" name="submit" value="envoyer">
+	</form> 
+<?php
+	echo "        ---->erreur email ou mdp<----";
+};
+
+
+if(isset($_POST['email']) && isset($_POST['password'])){
+
+	//echo ''.$_POST['email'].'';
+
+		$emailLogin = $_POST['email'];
+		$passwordLogin = $_POST['password'];
 
 	require '../Models/DALConnectionToDB.class.php' ;
 
 	require '../Models/DALUser.class.php' ;
 
-	// Vérifier si le formulaire a été soumis
-		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
 	// Récupérer les informations d'identification soumises
 			
-		$emailLogin = $_POST['email'];
-		$passwordLogin = $_POST['password'];
-
 	$OBJConnectionToDB = new DALUser($host,$dbname,$username,$password);
 	$OBJConnectionToDB->connection();
 
 	$requeteLoginLook = $OBJConnectionToDB->LoginLook($emailLogin,$passwordLogin);
 
-	// Récupération du résultat
-$user = $stmt->fetch();
+	$result = $requeteLoginLook->fetch(PDO::FETCH_ASSOC);
+	if($result['email'] == $emailLogin && $result['password'] == $passwordLogin) {
+        // Les informations d'identification sont correctes
+        $_SESSION['email'] = $emailLogin;
+        
+        echo "L'utilisateur est connecté avec succès !";
+        header("location: ../Controllers/ListUsers_C.php");
+    } else {
+        // Les informations d'identification sont incorrectes
 
-if ($user) {
-    // L'utilisateur existe
-} else {
-    // L'utilisateur n'existe pas ou les informations d'identification sont incorrectes
-}
+        echo "Nom d'utilisateur ou mot de passe incorrect !";
+		header("location: ../Controllers/Login_C.php");
+    }
 
+};
 
-
-
-
-	// Vérifier si les informations d'identification sont valides
-	if ($username == 'mon_nom_utilisateur' && $password == 'mon_mot_de_passe') {
-
-		// Les informations d'identification sont valides, créer une session pour l'utilisateur
-		$_SESSION['loggedin'] = true;
-		$_SESSION['username'] = $username;
-
-		// Rediriger l'utilisateur vers une page sécurisée
-		header("Location: page_securisee.php");
-		exit;

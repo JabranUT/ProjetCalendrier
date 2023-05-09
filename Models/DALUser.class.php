@@ -10,9 +10,14 @@ $dbname = 'projet_calendrier';
 class DALUser extends DALConnectionToDB{
 
    public function loginLook($emailLogin,$passwordLogin){
-      $this->maRequete = 'SELECT * FROM users WHERE email='.$emailLogin.' AND password='.$passwordLogin.'';
+
+      //var_dump($emailLogin);
+      //var_dump($passwordLogin);
+
+      $this->maRequete = "SELECT * FROM users WHERE email='".$emailLogin."' AND password='".$passwordLogin."'";
          $requeteLoginLook = $this->getConnection()->prepare($this->maRequete);
-      return $requeteLoginLook->execute();
+         $requeteLoginLook->execute();
+         return $requeteLoginLook;
    }
    
    public function read($id_user=NULL){

@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+if(isset($_SESSION['email'])){
 
 	require '../Views/Header_V.php' ;
 
@@ -38,3 +41,8 @@ $phone = (int) $_POST['phone'];
 	require '../Views/ModifyUser_V.php' ;
 
 	require '../Views/Foot_V.php' ;
+}
+if(!isset($_SESSION['email'])){
+header("location: ../Controllers/NOTLogedWelcome_C.php");
+}
+?>

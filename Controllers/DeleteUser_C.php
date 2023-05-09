@@ -1,5 +1,9 @@
 <?php 
 
+session_start();
+
+if(isset($_SESSION['email'])){
+
 	$Montitle= 'Calendrier';
 
 
@@ -16,5 +20,8 @@
 	$requeteLireUsers = $OBJConnectionToDB->delete($id_user);
 	header("location: ../Controllers/ListUsers_C.php");
 
-
+}
+if(!isset($_SESSION['email'])){
+header("location: ../Controllers/NOTLogedWelcome_C.php");
+}
 ?>

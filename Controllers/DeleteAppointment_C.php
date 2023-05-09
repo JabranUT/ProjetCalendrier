@@ -1,4 +1,8 @@
 <?php 
+session_start();
+
+if(isset($_SESSION['email'])){
+
 	$Montitle= 'Calendrier';
 
 
@@ -15,5 +19,8 @@
 	$requeteLireAppointments = $OBJConnectionToDB->delete($id_appointment);
 	header("location: ../Controllers/ListAppointments_C.php");
 
-
+}
+if(!isset($_SESSION['email'])){
+header("location: ../Controllers/NOTLogedWelcome_C.php");
+}
 ?>
