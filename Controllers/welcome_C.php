@@ -12,6 +12,7 @@ if(isset($_SESSION['email'])){
 
 
 	require '../Views/Foot_V.php' ;
+
 }
 if(!isset($_SESSION['email'])){
 header("location: ../Controllers/NOTLogedWelcome_C.php");

@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 	require '../Views/NOTLogedHeader_V.php' ;
@@ -31,16 +30,15 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
 	// Récupérer les informations d'identification soumises
 			
-	$OBJConnectionToDB = new DALUser($host,$dbname,$username,$password);
+	$OBJConnectionToDB = new DALUser($host,$dbname,$username,$passwordDB);
 	$OBJConnectionToDB->connection();
 
 	$requeteLoginLook = $OBJConnectionToDB->LoginLook($emailLogin,$passwordLogin);
 
 	$result = $requeteLoginLook->fetch(PDO::FETCH_ASSOC);
-	if($result['email'] == $emailLogin && $result['password'] == $passwordLogin) {
+	if(!empty($emailLogin) && !empty($passwordLogin) && $result['email'] == $emailLogin && $result['password'] == $passwordLogin) {
         // Les informations d'identification sont correctes
-        $_SESSION['email'] = $emailLogin;
-        
+                $_SESSION['email'] = $emailLogin;
         echo "L'utilisateur est connecté avec succès !";
         header("location: ../Controllers/ListUsers_C.php");
     } else {

@@ -19,16 +19,14 @@
           <li class="nav-item"><a class="nav-link " href="..\Controllers\CalendarFred_C.php">(Calendrier)</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\FormUser_C.php">(ajouter utilisateur)</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\ListUsers_C.php">(gestion des utilisateurs)</a></li>
-
-
-          
+     
         </ul>
       </nav>
     </div>
-    <?php 
+        <?php 
     if(isset($_SESSION['email'])) {
       Echo '<h2> Bonjour '.$_SESSION['email'].'
-        <form action="..\Controllers\LoginOUT_C.php" method="post" accept-charset="utf-8">
+        <form action="..\Controllers\LoginOut_C.php" method="post" accept-charset="utf-8">
           <input type="submit" name="" value="Se déconnecter">
 
         </form></h2>';

@@ -2,14 +2,14 @@
 session_start();
 
 if(isset($_SESSION['email'])){
-
+	
 	require '../Views/Header_V.php' ;
 
 	require '../Models/DALConnectionToDB.class.php' ;
 
 	require '../Models/DALUser.class.php' ;
 
-		$OBJConnectionToDB = new DALUser($host,$dbname,$username,$password);
+		$OBJConnectionToDB = new DALUser($host,$dbname,$username,$passwordDB);
 	//var_dump($OBJConnectionToDB);
 	$OBJConnectionToDB->connection();
 

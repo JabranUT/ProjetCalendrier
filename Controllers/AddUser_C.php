@@ -21,13 +21,14 @@ if(isset($_SESSION['email'])){
 
 var_dump($last_name);
 var_dump($first_name);
+var_dump($password);
 
-	$OBJConnectionToDB = new DALUser($host,$dbname,$username,$password);
+	$OBJConnectionToDB = new DALUser($host,$dbname,$username,$passwordDB);
 	var_dump($OBJConnectionToDB);
 	$OBJConnectionToDB->connection();
 
 	$requeteAddUser = $OBJConnectionToDB->add($last_name, $first_name, $email, $password, $address, $phone);
-	var_dump($requeteAddUser);
+	//var_dump($requeteAddUser);
 
 }
 

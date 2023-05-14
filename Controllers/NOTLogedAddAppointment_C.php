@@ -22,7 +22,7 @@
 var_dump($last_name);
 var_dump($first_name);
 
-	$OBJConnectionToDB = new DALAppointment($host,$dbname,$username,$password);
+	$OBJConnectionToDB = new DALAppointment($host,$dbname,$username,$passwordDB);
 	var_dump($OBJConnectionToDB);
 	$OBJConnectionToDB->connection();
 

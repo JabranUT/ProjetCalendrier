@@ -9,7 +9,7 @@ if(isset($_SESSION['email'])){
 
 	require '../Models/DALAppointment.class.php' ;
 
-		$OBJConnectionToDB = new DALAppointment($host,$dbname,$username,$password);
+		$OBJConnectionToDB = new DALAppointment($host,$dbname,$username,$passwordDB);
 	//var_dump($OBJConnectionToDB);
 	$OBJConnectionToDB->connection();
 

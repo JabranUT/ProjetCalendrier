@@ -2,7 +2,7 @@
 
 $host = '127.0.0.1';
 $username = 'root';
-$password = '';
+$passwordDB = '';
 $dbname = 'projet_calendrier';
 
 
@@ -52,9 +52,9 @@ class DALUser extends DALConnectionToDB{
 //  header("location: ../Controllers/Calendar_C.php");
    }
 
-   public function add($last_name, $first_name, $email, $password, $address, $phone){
+   public function add($last_name, $first_name, $email, $passwordU, $address, $phone){
 
-   $this->maRequete = "INSERT INTO users (`id_user`, `last_name`, `first_name`, `email`, `password`, `address`, `phone`) VALUES(NULL, '$last_name', '$first_name', '$email', '$password', '$address', '$phone')";
+   $this->maRequete = "INSERT INTO users (`id_user`, `last_name`, `first_name`, `email`, `password`, `address`, `phone`) VALUES(NULL, '$last_name', '$first_name', '$email', '$passwordU', '$address', '$phone')";
    $requeteAddUser = $this->getConnection()->prepare($this->maRequete);
    return $requeteAddUser->execute();
    }

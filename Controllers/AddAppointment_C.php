@@ -5,6 +5,8 @@ if(isset($_SESSION['email'])){
 	
 	$Montitle= 'prendre un rendez-vous';
 
+	$Montitle= 'prendre un rendez-vous';
+
 
 	require '../Models/DALConnectionToDB.class.php' ;
 
@@ -25,7 +27,7 @@ if(isset($_SESSION['email'])){
 var_dump($last_name);
 var_dump($first_name);
 
-	$OBJConnectionToDB = new DALAppointment($host,$dbname,$username,$password);
+	$OBJConnectionToDB = new DALAppointment($host,$dbname,$username,$passwordDB);
 	var_dump($OBJConnectionToDB);
 	$OBJConnectionToDB->connection();
 
@@ -40,4 +42,5 @@ header("location: ../Controllers/ListAppointments_C.php");
 if(!isset($_SESSION['email'])){
 header("location: ../Controllers/NOTLogedWelcome_C.php");
 }
+
 ?>
