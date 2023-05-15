@@ -4,7 +4,7 @@ session_start();
 if(isset($_SESSION['email'])){
 	require '../Views/Header_V.php' ;
 
-	require '../Models/DALConnectionToDB.class.php' ;
+	require '../Models/ConnectionToDB.class.php' ;
 
 	require '../Models/DALAppointment.class.php' ;
 

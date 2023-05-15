@@ -12,7 +12,6 @@
             <th>nom</th>
             <th>prenom</th>
             <th>email</th>
-            <th>password</th>
             <th>adresse</th>
             <th>téléphone</th>
             <th>date</th>
@@ -29,7 +28,6 @@ while ($ppointements = $requeteLireAppointement->fetch(PDO::FETCH_ASSOC)) {
         <td>$appointements[last_name]</td>
         <td>$appointements[first_name]</td>
         <td>$appointements[email]</td>
-        <td>$appointements[password]</td>
         <td>$appointements[address]</td>
         <td>$appointements[phone]</td>
         <td>$appointements[date]</td>

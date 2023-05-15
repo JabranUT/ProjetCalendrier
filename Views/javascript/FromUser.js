@@ -17,7 +17,20 @@
       }
     }
 */
-
+function action()
+         {
+         var ok = confirm("Etes-vous sûr ?");
+         if (ok)
+            {
+            alert("suppression ok !");
+            return true;
+            }
+         else
+            {
+            alert("abandon");
+            return false;
+            }
+         }
 
  function selection(field) {
   // Réinitialisation de la couleur de fond de tous les champs

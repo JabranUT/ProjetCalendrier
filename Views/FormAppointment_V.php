@@ -21,12 +21,6 @@
 </div>
 <br>
 <div>
-    <label for="">Password</label>
-    <input type="password" class="form-control" id="password" aria-describedby="emailHelp" placeholder="Entrer password " name="password" value="" onclick="selection(this)">
-    <small id="" class="form-text text-muted">Un conseil : 8 caractères au minimum</small>
-</div>
-<br>
-<div>
     <label for="">Adresse</label>
     <input type="text" class="form-control" id="address" aria-describedby="emailHelp" placeholder="Enter adresse " name="address" value="" onclick="selection(this)">
     <small id="" class="form-text text-muted">Ex: 32 rue des tartenpions, 6000, Charleroi</small>

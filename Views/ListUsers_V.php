@@ -31,8 +31,8 @@ while ($users = $requeteLireUsers->fetch(PDO::FETCH_ASSOC)) {
         <td>$users[phone]</td>
 
         <td>
-        <a class='btn btn-primary btn-sm' href='../Controllers/ModifyUser_C.php?id=$users[id_user]'>modif</a>
-        <a class='btn btn-primary btn-sm' href='../Controllers/DeleteUser_C.php?id=$users[id_user]'>delete</a>
+        <a class='btn btn-primary btn-sm' id='noti' href='../Controllers/ModifyUser_C.php?id=$users[id_user]'>modif</a>
+        <a class='btn btn-primary btn-sm' href='../Controllers/DeleteUser_C.php?id=$users[id_user]' onclick='return action()'>delete</a>
         </td>
         </tr>";
       }

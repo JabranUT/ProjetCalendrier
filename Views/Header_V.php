@@ -22,10 +22,9 @@
      
         </ul>
       </nav>
-    </div>
-        <?php 
+              <?php 
     if(isset($_SESSION['email'])) {
-      Echo '<h2> Bonjour '.$_SESSION['email'].'
+      Echo '<h3> Bonjour '.$_SESSION['email'].'
         <form action="..\Controllers\LoginOut_C.php" method="post" accept-charset="utf-8">
           <input type="submit" name="" value="Se déconnecter">
 
@@ -33,5 +32,7 @@
     }
 
   ?>
+    </div>
+
 <body>
 	

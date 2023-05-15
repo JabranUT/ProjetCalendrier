@@ -29,12 +29,6 @@ echo '<div class="container-sm">
 </div>
 <br>
 <div>
-    <label for="">Password</label>
-    <input type="password" class="form-control" id="" aria-describedby="emailHelp" placeholder="Entrer password " name="password" value="'.$appointment['password'].'">
-    <small id="" class="form-text text-muted">sous forme de text</small>
-</div>
-<br>
-<div>
     <label for="">Adresse</label>
     <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter adresse " name="address" value="'.$appointment['address'].'">
     <small id="" class="form-text text-muted">sous forme de text</small>

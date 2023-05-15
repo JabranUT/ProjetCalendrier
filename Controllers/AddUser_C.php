@@ -5,7 +5,7 @@ if(isset($_SESSION['email'])){
 	$Montitle= 'prendre un rendez-vous';
 
 
-	require '../Models/DALConnectionToDB.class.php' ;
+	require '../Models/ConnectionToDB.class.php' ;
 
 	require '../Models/DALUser.class.php' ;
 

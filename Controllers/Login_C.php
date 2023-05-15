@@ -24,7 +24,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 		$emailLogin = $_POST['email'];
 		$passwordLogin = $_POST['password'];
 
-	require '../Models/DALConnectionToDB.class.php' ;
+	require '../Models/ConnectionToDB.class.php' ;
 
 	require '../Models/DALUser.class.php' ;
 

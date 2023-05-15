@@ -1,0 +1,7 @@
+data base 
+login = root
+mdp =
+
+site web
+login admin@admin.be
+pmdp admin

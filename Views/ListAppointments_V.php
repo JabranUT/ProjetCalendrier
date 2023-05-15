@@ -12,7 +12,6 @@
             <th>nom</th>
             <th>prenom</th>
             <th>email</th>
-            <th>password</th>
             <th>adresse</th>
             <th>téléphone</th>
             <th>date</th>
@@ -28,7 +27,6 @@ while ($appointments = $requeteLireAppointments->fetch(PDO::FETCH_ASSOC)) {
         <td>$appointments[last_name]</td>
         <td>$appointments[first_name]</td>
         <td>$appointments[email]</td>
-        <td>$appointments[password]</td>
         <td>$appointments[address]</td>
         <td>$appointments[phone]</td>
         <td>$appointments[date]</td>
@@ -36,7 +34,7 @@ while ($appointments = $requeteLireAppointments->fetch(PDO::FETCH_ASSOC)) {
 
         <td>
         <a class='btn btn-primary btn-sm' href='../Controllers/ModifyAppointment_C.php?id=$appointments[id_appointment]'>modif</a>
-        <a class='btn btn-primary btn-sm' href='../Controllers/DeleteAppointment_C.php?id=$appointments[id_appointment]'>delete</a>
+        <a class='btn btn-primary btn-sm' href='../Controllers/DeleteAppointment_C.php?id=$appointments[id_appointment]' onclick='return action()'>delete</a>
         </td>
         </tr>";
       }

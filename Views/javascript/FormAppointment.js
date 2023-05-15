@@ -28,6 +28,21 @@
   field.style.backgroundColor = "yellow";
    }
 */
+function action()
+         {
+         var ok = confirm("Etes-vous sûr ?");
+         if (ok)
+            {
+            alert("suppression ok !");
+            return true;
+            }
+         else
+            {
+            alert("abandon");
+            return false;
+            }
+         }
+         
 function selection(field) {
   // Réinitialisation de la couleur de fond de tous les champs
   var fields = document.getElementsByTagName("input");
@@ -43,14 +58,12 @@ function selection(field) {
         var last_name = document.forms["FormularAppointment"]["last_name"];
         var first_name = document.forms["FormularAppointment"]["first_name"];
         var email = document.forms["FormularAppointment"]["email"];
-        var password = document.forms["FormularAppointment"]["password"];
         var address = document.forms["FormularAppointment"]["address"];
         var phone = document.forms["FormularAppointment"]["phone"];
         var phone = document.forms["FormularAppointment"]["date"];
         var phone = document.forms["FormularAppointment"]["hour"];
 
-        if (last_name.value == "" || first_name.value == "" || email.value == "" || password.value == "" ||
-            address.value == "" || phone.value == "" || date.value == "" || hour.value == "")
+        if (last_name.value == "" || first_name.value == "" || email.value == "" || address.value == "" || phone.value == "" || date.value == "" || hour.value == "")
         {
             alert("Manque une ou plusieurs informations !");
             event.preventDefault(); // Annulation de la soumission du FormularUser

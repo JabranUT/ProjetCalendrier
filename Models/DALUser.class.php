@@ -7,7 +7,7 @@ $dbname = 'projet_calendrier';
 
 
 
-class DALUser extends DALConnectionToDB{
+class DALUser extends ConnectionToDB{
 
    public function loginLook($emailLogin,$passwordLogin){
 
