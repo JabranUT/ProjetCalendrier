@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,12 +12,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
-<div class="container">
+<div class="container-fluid">
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Gestion des rendez-vous :</a>
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link " href="..\Controllers/welcome_C.php">(Home)</a></li>
-          <li class="nav-item"><a class="nav-link " href="..\Controllers\FormAppointment_C.php">(prendre un rendez-vous)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Views\Welcome_V.php">(Home)</a></li>
+          <li class="nav-item"><a class="nav-link " href="..\Views\FormAppointment_V.php">(prendre un rendez-vous)</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\ListAppointments_C.php">(gestion des rendez-vous)</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\CalendarFred_C.php">(Calendrier)</a></li>
           <li class="nav-item"><a class="nav-link " href="..\Controllers\FormUser_C.php">(ajouter utilisateur)</a></li>

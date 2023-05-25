@@ -1,4 +1,11 @@
-
+<?php
+    require '../Views/Header_V.php' ;
+    if(isset($_SESSION['error_message_last_name']))
+        {
+            $error_message_last_name = $_SESSION['error_message_last_name'];
+             echo "<div class='error'>$error_message_last_name</div>";
+        }
+?>
  <div class="container-sm">
 <form action="../Controllers/AddAppointment_C.php" method="post" name="FormularAppointment" accept-charset="utf-8" id="myFormAppointment">
 
@@ -52,3 +59,7 @@
 
 </form>
 </div>
+
+<?php
+    require '../Views/Foot_V.php' ;
+?>

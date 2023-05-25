@@ -1,4 +1,6 @@
-
+<?php
+    require '../Views/NOTLogedHeader_V.php' ;
+?>
  <div class="container-sm">
 <form action="../Controllers/NOTLogedAddAppointment_C.php" method="post" name="FormularAppointment" accept-charset="utf-8" id="myFormAppointment">
 
@@ -53,3 +55,6 @@
 
 </form>
 </div>
+<?php
+    require '../Views/Foot_V.php' ;
+?>

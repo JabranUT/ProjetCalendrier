@@ -1,4 +1,6 @@
-
+<?php
+  require '../Views/Header_V.php' ;
+?>
 <div class="container">
 
   <h2>Liste des Utilisateurs</h2>
@@ -41,3 +43,6 @@ while ($users = $requeteLireUsers->fetch(PDO::FETCH_ASSOC)) {
         </tbody>
       </table>
       </div>
+<?php
+  require '../Views/Foot_V.php' ;
+?>

@@ -1,4 +1,6 @@
-
+<?php
+    require '../Views/Header_V.php' ;
+?>
  <div class="container-sm">
 <form action="../Controllers/AddUser_C.php" method="post" name="FormularUser" accept-charset="utf-8" id="myFormUser">
 
@@ -49,3 +51,6 @@
 </div>
 
 
+<?php
+    require '../Views/Foot_V.php' ;
+?>

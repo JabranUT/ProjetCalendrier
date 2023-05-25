@@ -3,7 +3,7 @@
 $host = '127.0.0.1';
 $username = 'root';
 $passwordDB = '';
-$dbname = 'projet_calendrier';
+$dbname = 'leloux_aboumerouane';
 
 
 

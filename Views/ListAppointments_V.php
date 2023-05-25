@@ -1,4 +1,6 @@
-
+<?php
+  require '../Views/Header_V.php' ;
+?>
 <div class="container">
 
   <h2>Liste des rendez-vous</h2>
@@ -43,3 +45,6 @@ while ($appointments = $requeteLireAppointments->fetch(PDO::FETCH_ASSOC)) {
         </tbody>
       </table>
       </div>
+<?php
+  require '../Views/Foot_V.php' ;
+?>
